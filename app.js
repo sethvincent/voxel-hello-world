@@ -81049,11 +81049,9 @@ var debris = require('voxel-debris')
 var blockSelector = toolbar({el: '#tools'})
 
 var game = createGame({
-  generate: function(x,y,z) {
-    return x*x+y*y+z*z <= 20*20 ? 1 : 0 // sphere world
-  },
-  startingPosition: [0, 0, 0],
-  cubeSize: 300,
+  generate: voxel.generator['Valley'],
+  startingPosition: [185, 100, 100],
+  cubeSize: 2,
 })
 
 window.game = game // for debugging

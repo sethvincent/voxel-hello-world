@@ -7,7 +7,8 @@ var blockSelector = toolbar({el: '#tools'})
 
 var game = createGame({
   generate: voxel.generator['Valley'],
-  startingPosition: [185, 100, 0]
+  startingPosition: [185, 100, 100],
+  cubeSize: 2,
 })
 
 window.game = game // for debugging
